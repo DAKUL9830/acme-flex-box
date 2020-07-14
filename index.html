@@ -1,0 +1,313 @@
+<!--<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing:border-box;
+            }
+         .panel{
+             height:75px;
+             background-color:rgb(53, 139, 219);
+             display:flex;
+             align-items: center;
+             justify-content:space-around;
+         }
+         .panel>h1{
+             color:white;
+         }
+         .panel>div{
+            color:white;
+         }
+         .content{
+             display:flex;
+             flex-wrap: wrap;
+             justify-content: center;
+            
+         }
+         h1{
+             color:grey;
+         }
+         
+
+           .content>div{
+               border:solid 1px black;
+               height: 150px;
+               width:30%;
+               margin:1rem;
+               
+               border-radius: 10px;
+           } 
+           .content.big{
+               height:250px;
+               width:70%;
+               border-radius:5px;
+               
+           }
+           .content>.small{
+               height:100px;
+           }
+           .content>h1{
+               color:grey;
+               
+           }
+           h3{
+            color:grey;  
+           }
+           label{
+               color:grey;
+           }
+           input{
+               width:300px;
+           }
+           select{
+               width:300px;
+               border-radius:3px;
+           }
+           .content>div{
+               justify-items:center;
+               
+           }
+           div{
+               color:grey;
+           }
+           #first{
+               justify-content: center;
+           }
+           body{
+               flex-wrap:wrap;
+           }
+           @media (max-width:1000px){
+               .content{
+                   width:100%;
+               }
+               .panel{
+                   flex-direction:column;
+               }
+           }
+           
+                 
+        </style>
+    </head>
+    <body>
+        <div class='panel'>
+            <h1>Acme Layout</h1>
+            <div>Users</div>
+            <div>Department</div>
+            <div>Contact</div>
+        </div>
+        <h1>Users</h1>
+        <div class='content'>
+            
+            <div class='big'>
+                <form>
+                    <h1>Create A User</h1>
+                    <div class='firstname'>
+                      <label>First Name</label>
+                      <input placeholder='Jane' />
+                    </div>
+                    <div>
+                      <label>Last Name</label>
+                      <input placeholder='Doe' />
+                    </div>
+                    <div>
+                      <label>Department</label>
+                      <select>
+                        <option value=''>-- None --</option>
+                        <option value=''>Administration</option>
+                        <option value=''>Human Resources</option>
+                        <option value=''>Engineering</option>
+                      </select>
+                    </div>
+                    <div class='button-row'>
+                      <button>Clear</button>
+                      <button class='primary'>Save</button>
+                    </div>
+                  </form>
+            </div>
+            <div>
+                <h3>User A</h3>
+                <div>Some text for the user</div>
+            </div>
+            <div>
+                <h3>User A</h3>
+                <div>Some text for the user.
+                     Some text for the user.
+                     Some text for the user.
+                     Some text for the user.
+                     Some text for the user.
+                     Some text for the user.
+                </div>
+            </div>
+            <div id='first'>
+                <h3>User A</h3>
+                <div>Some text for the user</div>
+            </div>
+            <div class='small'>
+                <h3>User A</h3>
+                <div>Some text for the user</div>
+            </div>
+            <div class='small'>
+                <h3>User A</h3>
+                <div>Some text for the user</div>
+            </div>
+            <div class='small'>
+                <h3>User A</h3>
+                <div>Some text for the user</div>
+            </div>
+            <div>
+                <h3>User A</h3>
+                <div>Some text for the user</div>
+            </div>
+        </div>
+    </body>
+</html>-->
+<html>
+    <head>
+  <meta name='viewport' content='width=device-width' />
+  
+  <style>
+      header{
+        height:75px;
+             background-color:rgb(53, 139, 219);
+             display:flex;
+             align-items: center;
+             justify-content:space-around;
+
+      }
+      header>h1{
+             color:white;
+         }
+       header>div{
+            color:white;
+         }
+         #content{
+            
+            justify-items: center;
+         }
+         #content>form{
+            border:solid 1px black;
+               height: 250px;
+               width:50%;
+               margin:1rem;
+               flex-direction:column;
+               border-radius: 10px;
+               justify-content: space-around;
+               
+         }
+         .tiles{
+             display:flex;
+             flex-wrap:wrap;
+         }
+         .tiles>div{
+            border:solid 1px black;
+               height: 150px;
+               width:30%;
+               margin:1rem;
+               
+               border-radius: 10px;
+         }
+         .tiles>.small{
+            height:100px;
+         }
+         #content>h1{
+               color:grey;
+           }
+           form>h1{
+            color:grey;
+           }
+           label{
+            color:grey; 
+           }
+           .tiles>div{
+               color:grey;
+           }
+           
+         @media (max-width:600px){
+               header{
+                   flex-direction:column;
+                   height:150px;
+               }
+               .tiles{
+                  flex-direction: column;
+               }
+               .tiles>div{
+                   width:50%;
+               }
+           }
+          
+
+  </style>
+  </head>
+  <body>
+    <header>
+        <h1>Acme Layout</h1>
+        <div>Users</div>
+        <div>Department</div>
+        <div>Contact</div>
+    </header>
+    <div id='content'>
+      <h1>Users</h1>
+      <form>
+        <h1>Create A User</h1>
+        <div>
+          <label>First Name</label>
+          <input placeholder='Jane' />
+        </div>
+        <div>
+          <label>Last Name</label>
+          <input placeholder='Doe' />
+        </div>
+        <div>
+          <label>Department</label>
+          <select>
+            <option value=''>-- None --</option>
+            <option value=''>Administration</option>
+            <option value=''>Human Resources</option>
+            <option value=''>Engineering</option>
+          </select>
+        </div>
+        <div class='button-row'>
+          <button>Clear</button>
+          <button class='primary'>Save</button>
+        </div>
+      </form>
+      <div class='tiles'>
+        <div>
+          <h4>User A</h4>
+          <div>Some text for the user</div>
+        </div>
+        <div>
+          <h4>User A</h4>
+          <div class='bigger'>
+            Some text for the user.
+            Some text for the user.
+            Some text for the user.
+            Some text for the user.
+            Some text for the user.
+            Some text for the user.
+          </div>
+        </div>
+        <div>
+          <h4>User A</h4>
+          <div>Some text for the user</div>
+        </div>
+        <div class='small'>
+          <h4>User A</h4>
+          <div>Some text for the user</div>
+        </div>
+        <div class='small'>
+          <h4>User A</h4>
+          <div>Some text for the user</div>
+        </div>
+        <div class='small'>
+          <h4>User A</h4>
+          <div>Some text for the user</div>
+        </div>
+        <div>
+          <h4>User A</h4>
+          <div>Some text for the user</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
